@@ -1,14 +1,7 @@
 class Connection < WashOut::Type
 	attr_accessor :id, :departure, :arrival, :start_station_name, :end_station_name, :train_nr, :price
-  map {
-    id: :integer,
-    departure: :datetime,
-    arrival: :datetime,
-    start_station_name: :string,
-    end_station_name: :string,
-    train_nr: :integer,
-    price: :double
-  }
+  map id: :integer, departure: :datetime, arrival: :datetime, start_station_name: :string, end_station_name: :string, train_nr: :integer, price: :double
+  
 
   def self.all
   	[Connection.new(

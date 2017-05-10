@@ -1,6 +1,6 @@
 class Reservation < WashOut::Type
 	attr_accessor :connection, :wallet, :confirmation_code
-	map { amount: :double, confirmation_code: :string, connection: Connection }
+	map amount: :double, confirmation_code: :string, connection: Connection
 
 	def initialize(wallet, connection)
 		@wallet = wallet

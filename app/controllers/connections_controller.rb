@@ -3,7 +3,7 @@ class ConnectionsController < ApplicationController
 
 	soap_action 'get_connections', args: { connection_request: ConnectionRequest }, return: { connections: [Connection] }
 	def get_connections
-		render soap: [Connection.find_by_connection_request(params[:connection_request])]
+		render soap: Connection.find_by_connection_request(params[:connection_request])
 	end
 
 
