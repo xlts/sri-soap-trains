@@ -1,2 +1,0 @@
-class InsufficientBalance < SOAPError
-end
